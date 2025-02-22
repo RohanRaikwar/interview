@@ -1,0 +1,14 @@
+.btn {
+  background: linear-gradient(180deg, #7848ff 0%, #6254ff 100%);
+  border-radius: 8px;
+  padding: 12px;
+  font-family: Space Grotesk;
+  font-weight: 700;
+  font-size: 15px;
+  color: #ffffff;
+  border: none;
+}
+
+.btn-primary {
+  background: #363640 !important;
+}

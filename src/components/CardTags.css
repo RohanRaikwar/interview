@@ -1,0 +1,14 @@
+.card-tags {
+  border: 1px solid var(--Shade-4, #363640);
+  border-radius: 6px;
+  background: #29292f;
+  border-width: 1px;
+  padding: 5px 8px;
+}
+
+.card-tag {
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 500;
+  color: #a3a3b7;
+  font-size: 14px;
+}

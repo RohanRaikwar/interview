@@ -1,0 +1,37 @@
+.select-wrapper {
+  display: inline-block;
+  background: #16161b;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  position: relative;
+
+  .select-value-wrapper {
+    gap: 8px;
+    border-radius: 8px;
+    border-width: 1px;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border: 1px solid #2d2d33;
+    background: #16161b;
+
+    h2 {
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+
+  .select-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-height: 500px;
+    z-index: 1;
+  }
+}

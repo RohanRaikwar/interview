@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+
+  background-color: #101012;
+  z-index: 1;
+  position: relative;
 }
 
 .App-logo {
@@ -35,4 +39,12 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
 }
