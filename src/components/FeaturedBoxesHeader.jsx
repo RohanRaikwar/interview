@@ -11,16 +11,14 @@ const FeaturedBoxesHeader = () => {
         <FaBox className="icon" />
         <h2>Featured Boxes</h2>
       </div>
-
-      <div className="tabs">
-        <button className="tab active">Featured</button>
-        <button className="tab">New Boxes</button>
-        <button className="tab">Top Boxes</button>
+      <div className="sort-dropdown">
+      <span className="sort-label">Sort by:</span>
+      <div className="sort-select">
+        <span className="selected-value">{selected}</span>
+        <FaChevronDown className="dropdown-icon" />
       </div>
-      <div className="sort">
-        <span>Sort by:</span>
-        <div className="sort-dropdown">Price ▼</div>
-      </div>
+    </div>
+    
     </div>
   );
 };
