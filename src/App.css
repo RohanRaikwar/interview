@@ -1,19 +1,14 @@
 /* General styles */
 .App {
-  text-align: center;
   background-color: #101012;
   color: white;
   font-family: "Inter", sans-serif;
-  overflow-x: auto; /* Allows horizontal scrolling */
-  white-space: nowrap; /* Prevents wrapping */
 }
 
 /* Layout Styling */
 .main-content {
   display: flex;
-  gap: 20px;
-  padding: 20px;
-  min-width: max-content; /* Prevents shrinking and enables horizontal scrolling */
+  width: 100%;
 }
 
 /* Left Sidebar */
@@ -80,6 +75,6 @@
   }
 
   .card-grid {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(5, 1fr);
   }
 }
