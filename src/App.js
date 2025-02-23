@@ -9,7 +9,8 @@ import BattlesCardWrapper from "./components/BattelsCardWrapper";
 import Footer from "./components/Footer";
 import FeaturedBoxesHeader from "./components/FeaturedBoxesHeader";
 import LatestBattlesHeader from "./components/LatestHeader";
-
+import SignupBanner from "./components/SignupBanner";
+import EarnBanner from "./components/EarnBanner";
 
 function App() {
   return (
@@ -19,14 +20,20 @@ function App() {
       {/* Main Content Layout */}
       <div className="main-content">
         <div className="left-sidebar">
-        <VerticalSidebar />
+          <VerticalSidebar />
         </div>
 
         <div className="center-content">
+          <div style={{ display: "flex", gap: "14px" }}>
+            <SignupBanner />
+            <EarnBanner />
+          </div>
           <div className="featured-boxes">
-           <FeaturedBoxesHeader />
-         
+            <FeaturedBoxesHeader />
+
             <div className="card-grid">
+              <Card />
+              <Card />
               <Card />
               <Card />
               <Card />
@@ -41,11 +48,11 @@ function App() {
           <BattlesCardWrapper />
           <BattlesCardWrapper />
           <BattlesCardWrapper />
-         <BattlesCardWrapper />
-          <div style={{display:"flex",alignItems:"center",gap:"10px", }}>
-          <ReviewCard />
-          <ReviewCard />
-          <ReviewCard />
+          <BattlesCardWrapper />
+          <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+            <ReviewCard />
+            <ReviewCard />
+            <ReviewCard />
           </div>
         </div>
 
