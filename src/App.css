@@ -1,50 +1,85 @@
+/* General styles */
 .App {
   text-align: center;
-
   background-color: #101012;
-  z-index: 1;
-  position: relative;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+  font-family: "Inter", sans-serif;
+  overflow-x: auto; /* Allows horizontal scrolling */
+  white-space: nowrap; /* Prevents wrapping */
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+/* Layout Styling */
+.main-content {
+  display: flex;
   gap: 20px;
   padding: 20px;
-  justify-content: center;
+  min-width: max-content; /* Prevents shrinking and enables horizontal scrolling */
+}
+
+/* Left Sidebar */
+.left-sidebar {
+  flex: none;
+  min-width: 80px; /* Ensures sidebar does not take too much space */
+}
+
+/* Center Content */
+.center-content {
+  flex: 1;
+  min-width: 1080px; /* Ensures main content area remains wide enough */
+}
+
+/* Right Sidebar */
+.right-sidebar {
+  flex: none;
+  min-width: 250px; /* Minimum width so it doesn’t collapse */
+}
+
+/* Featured Boxes */
+.featured-boxes h2 {
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+/* Card Grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 10px;
+}
+
+/* Battle Section */
+.battles-section {
+  margin-top: 30px;
+}
+
+/* Reviews Section */
+.reviews-section {
+  margin-top: 40px;
+  padding: 20px;
+}
+
+/* Chat Interface */
+.right-sidebar .chat-interface {
+  background: #18181b;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .main-content {
+    flex-direction: row; /* Keeps horizontal scrolling */
+    overflow-x: auto;
+  }
+
+  .left-sidebar,
+  .right-sidebar {
+    min-width: 80px;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
 }

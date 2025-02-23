@@ -1,5 +1,6 @@
 .battles-card-wrapper {
   display: flex;
+  flex:8;
   margin: 20px;
   width: calc(100% - 40px);
   position: relative;
@@ -47,4 +48,103 @@
 
 .box img {
   width: 12%;
+}
+
+
+.battles-card-wrapper1 {
+
+  display: flex;
+  flex:1;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+/* Battle Box - Fixed 250x81px */
+.battle-box {
+  display: flex;
+  align-items: center;
+   gap:10px;
+  background: #18181b;
+  width: 250px;
+  height: 81px;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.image-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 120px; 
+  height: 70px;
+}
+
+/* Left Image */
+.image-left {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Right Image (Overlapping) */
+.image-right {
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+}
+
+@media (max-width: 400px) {
+  .image-container {
+    width: 100px;
+  }
+
+  .image-left,
+  .image-right {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.battle-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scissors-icon {
+  font-size: 16px;
+  color: #4f46e5;
+}
+
+/* Responsive */
+@media (max-width: 280px) {
+  .battle-box {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .battle-team {
+    flex-direction: row;
+  }
+
+  .player-img {
+    width: 40px;
+    height: 40px;
+  }
+}
+.card-price {
+  font-family: Space Grotesk;
+  font-weight: 700;
+  font-size: 18px;
+  color: #ffffff;
 }
