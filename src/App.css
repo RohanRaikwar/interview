@@ -17,12 +17,6 @@
   min-width: 80px; /* Ensures sidebar does not take too much space */
 }
 
-/* Center Content */
-.center-content {
-  flex: 1;
-  min-width: 1080px; /* Ensures main content area remains wide enough */
-}
-
 /* Right Sidebar */
 .right-sidebar {
   flex: none;
@@ -77,4 +71,28 @@
   .card-grid {
     grid-template-columns: repeat(5, 1fr);
   }
+}
+
+@media (max-width: 700px) {
+  .main-content {
+    flex-direction: row; /* Keeps horizontal scrolling */
+    overflow-x: auto;
+  }
+
+  .left-sidebar,
+  .right-sidebar {
+    display: none;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .slice {
+    overflow-x: hidden;
+  }
+}
+
+.slice {
+  width: 100%;
 }
