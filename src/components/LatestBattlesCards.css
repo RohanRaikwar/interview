@@ -1,0 +1,88 @@
+.latest-battles-container {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px;
+   
+  }
+  
+  .battle-card {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    max-width: 220px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+    position: relative;
+  }
+  
+  /* Battle Image */
+  .battle-image {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .battle-image img {
+    max-width: 60px;
+    max-height: 60px;
+    border-radius: 8px;
+  }
+  
+  .battle-info {
+    width: 100%;
+    text-align: left;
+    margin-top: 8px;
+  }
+  
+  .battle-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    display: block;
+  }
+  
+  .battle-user {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  
+  /* User Avatar */
+  .user-avatar {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .latest-battles-container {
+      justify-content: flex-start;
+    }
+  
+    .battle-card {
+      width: 120px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .battle-card {
+      width: 110px;
+      padding: 8px;
+    }
+  
+    .battle-price {
+      font-size: 12px;
+    }
+  }
+  

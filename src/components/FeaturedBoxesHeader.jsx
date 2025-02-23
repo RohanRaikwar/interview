@@ -1,8 +1,10 @@
-import React from "react";
+import React,{useState} from "react";
 import "./FeaturedBoxesHeader.css";
 import { FaBox } from "react-icons/fa";
+import { FaChevronDown } from "react-icons/fa";
 
 const FeaturedBoxesHeader = () => {
+    const [selected, setSelected] = useState("Price");
   return (
     <div className="featured-boxes-header">
       <div className="title">

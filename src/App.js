@@ -9,6 +9,7 @@ import BattlesCardWrapper from "./components/BattelsCardWrapper";
 import Footer from "./components/Footer";
 import FeaturedBoxesHeader from "./components/FeaturedBoxesHeader";
 import LatestBattlesHeader from "./components/LatestHeader";
+import LatestBattlesCards from "./components/LatestBattlesCards";
 
 
 function App() {
@@ -24,8 +25,9 @@ function App() {
 
         <div className="center-content">
           <div className="featured-boxes">
+            <LatestBattlesCards />
            <FeaturedBoxesHeader />
-         
+          
             <div className="card-grid">
               <Card />
               <Card />
