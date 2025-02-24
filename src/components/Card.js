@@ -6,6 +6,9 @@ import Button from "./Button";
 const Card = () => {
   return (
     <div className="card">
+      <div>
+        <Tag type={"hot"} />
+      </div>
       <div className="card-image">
         <img src="card.png" alt="Card Image" />
       </div>
@@ -27,6 +30,46 @@ const Card = () => {
           Info
         </Button>
       </div>
+    </div>
+  );
+};
+
+const Tag = ({ type }) => {
+  const tag = {
+    hot: {
+      name: "Hot",
+      background: "linear-gradient(180deg, #FF793F 0%, #FB3529 100%)",
+      color: "#ffffff",
+    },
+    new: {
+      name: "New",
+      background: "linear-gradient(180deg, #4CAF50 0%, #2E7D32 100%)",
+      color: "#ffffff",
+    },
+    popular: {
+      name: "Popular",
+      background: "linear-gradient(180deg, #2196F3 0%, #1976D2 100%)",
+      color: "#ffffff",
+    },
+  };
+
+  const currentTag = tag[type];
+
+  if (!currentTag) return null; // Handle invalid types
+
+  return (
+    <div
+      style={{
+        padding: "8px",
+        borderRadius: "8px",
+        background: currentTag.background,
+        color: currentTag.color,
+        fontSize: "14px",
+        fontWeight: "bold",
+        fontFamily: "Space Grotesk",
+      }}
+    >
+      {currentTag.name}
     </div>
   );
 };

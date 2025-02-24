@@ -1,128 +1,100 @@
 .featured-boxes-header {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-radius: 10px;
+  flex-wrap: wrap;
+}
+
+/* Title and Icon */
+.title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.title h2 {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.icon {
+  color: #a68eff;
+  font-size: 22px;
+}
+
+/* Tabs Section */
+.tabs {
+  display: flex;
+  gap: 10px;
+  background: #1a1a20;
+  padding: 5px;
+  border-radius: 12px;
+}
+
+.tab {
+  background: transparent;
+  border: none;
+  font-family: Space Grotesk;
+  font-weight: 700;
+  padding: 12px 15px;
+
+  font-size: 15px;
+  cursor: pointer;
+  color: #676778;
+  transition: 0.3s;
+
+  border-radius: 8px;
+}
+
+.tab.active {
+  background: #7a5aff;
+  color: white;
+  background: linear-gradient(180deg, #7848ff 0%, #6254ff 100%);
+}
+
+.tab:hover {
+  color: white;
+}
+
+/* Sort Dropdown */
+.sort {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.sort span {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+}
+
+.sort-dropdown {
+  background: #282c34;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .featured-boxes-header {
+    flex-direction: column;
     align-items: center;
-    background: #18181b;
-    padding: 15px 20px;
-    border-radius: 10px;
-    flex-wrap: wrap;
+    text-align: center;
+    gap: 10px;
   }
 
-  .title {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .title h2 {
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
-  .icon {
-    color: #a68eff;
-    font-size: 22px;
-  }
-  
-  
   .tabs {
-    display: flex;
-    gap: 10px;
+    justify-content: center;
   }
-  
-  .tab {
-    background: transparent;
-    border: none;
-    padding: 8px 15px;
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 14px;
-    cursor: pointer;
-    transition: 0.3s;
-    border-radius: 8px;
-  }
-  
-  .tab.active {
-    background: #7a5aff;
-    color: white;
-  }
-  
-  .tab:hover {
-    color: white;
-  }
-  
 
   .sort {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+    margin-top: 5px;
   }
-  
-  .sort-dropdown {
-    display: flex;
-    align-items: center;
-    background: #18181b;
-    padding: 10px 15px;
-    border-radius: 8px;
-    gap: 5px;
-    cursor: pointer;
-    max-width: 200px;
-  }
-  
-  /* Sort Label */
-  .sort-label {
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.6);
-    font-weight: 500;
-  }
-  
-  /* Sort Select */
-  .sort-select {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 14px;
-    font-weight: bold;
-    color: white;
-  }
-  
-  /* Dropdown Icon */
-  .dropdown-icon {
-    font-size: 12px;
-    color: rgba(255, 255, 255, 0.5);
-  }
-  
-
-  @media (max-width: 480px) {
-    .sort-dropdown {
-      padding: 8px 12px;
-    }
-  
-    .sort-label,
-    .sort-select {
-      font-size: 12px;
-    }
-  
-    .dropdown-icon {
-      font-size: 10px;
-    }
-  }
-  
-  
-  @media (max-width: 768px) {
-    .featured-boxes-header {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 10px;
-    }
-  
-    .tabs {
-      justify-content: center;
-    }
-  
-    .sort {
-      margin-top: 5px;
-    }
-  }
-  
+}

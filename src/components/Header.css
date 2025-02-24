@@ -22,6 +22,7 @@ nav ul {
   list-style: none;
   align-items: center;
   padding: 0;
+  margin: 0;
 }
 
 li {
@@ -35,5 +36,31 @@ li {
     font-size: 15px;
     color: #a3a3b7;
     text-decoration: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .Header {
+    padding: 10px 1 0px;
+  }
+
+  .header-left {
+    gap: 20px;
+  }
+
+  .header-right {
+    gap: 20px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .select-wrapper:first-child {
+    display: none;
+  }
+
+  li a {
+    font-size: 14px;
   }
 }

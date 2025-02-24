@@ -25,10 +25,13 @@ function App() {
         </div>
 
         <div className="center-content">
-          <div style={{ display: "flex", gap: "14px" }}>
-            <SignupBanner />
-            <EarnBanner />
+          <div className="slice">
+            <div style={{ display: "flex", gap: "14px", padding: "10px" }}>
+              <SignupBanner />
+              <EarnBanner />
+            </div>
           </div>
+
           <div className="featured-boxes">
             <FeaturedBoxesHeader />
 
@@ -46,10 +49,22 @@ function App() {
             </div>
           </div>
           <LatestBattlesHeader />
-          <BattlesCardWrapper />
-          <BattlesCardWrapper />
-          <BattlesCardWrapper />
-          <BattlesCardWrapper />
+
+          <div
+            style={{
+              display: "flex",
+              alignItems: "stretch",
+              gap: "10px",
+              flexDirection: "column",
+            }}
+          >
+            {" "}
+            <BattlesCardWrapper />
+            <BattlesCardWrapper />
+            <BattlesCardWrapper />
+            <BattlesCardWrapper />
+          </div>
+
           <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
             <ReviewCard />
             <ReviewCard />
